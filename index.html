@@ -166,10 +166,10 @@
             <a href="#news"><b>News</b></a> &#8195;<span>·</span>&#8195;
             <a href="#experience"><b>Experience</b></a> &#8195;<span>·</span>&#8195;
             <a href="#research"><b>Research Portfolio</b></a> &#8195;<span>·</span>&#8195;
-            <a href="#competitions"><b>Competitions & OSS</b></a> &#8195;<span>·</span>&#8195;
             <a href="#education"><b>Education</b></a> &#8195;<span>·</span>&#8195;
             <a href="#publications"><b>Selected Publications</b></a> &#8195;<span>·</span>&#8195;
             <a href="#patents"><b>Granted Patents</b></a> &#8195;<span>·</span>&#8195;
+            <a href="#competitions"><b>Competitions & OSS</b></a> &#8195;<span>·</span>&#8195;
             <a href="#extra"><b>Extra</b></a> &#8195;<span>·</span>
             </td>
           
@@ -417,7 +417,7 @@
                     <br>
                     <em> Conference on Neural Information Processing Systems (NeurIPS) 2025</em>
                     <br>
-                    <a href="https://openreview.net/forum?id=klmc4fwPLd">Paper</a> | <a href="https://github.com/NVIDIA/kvpress/">Code</a>
+                    <a href="https://openreview.net/forum?id=klmc4fwPLd">Openreview</a> | <a href="https://github.com/NVIDIA/kvpress/">Code</a>
                     <br>
                   <p style="color:rgb(156, 156, 156)">
                     Key-value (KV) cache compression has emerged as a critical technique for reducing the memory and latency overhead of autoregressive language models during inference. Prior approaches predominantly rely on query-key attention scores to rank and evict cached tokens, assuming that attention intensity correlates with semantic importance. However, this heuristic overlooks the contribution of value vectors, which directly influence the attention output. In this paper, we propose CurDKV, a novel, value-centric KV compression method that selects keys and values based on leverage scores computed from CUR matrix decomposition. Our approach approximates the dominant subspace of the attention output , ensuring that the retained tokens best preserve the model's predictive behavior. Theoretically, we show that attention score approximation does not guarantee output preservation, and demonstrate that CUR-based selection minimizes end-to-end attention reconstruction loss. Empirically, CurDKV achieves up to 9.6% higher accuracy than state-of-the-art methods like SnapKV and ChunkKV under aggressive compression budgets on LLaMA and Mistral, while maintaining compatibility with FlashAttention and Grouped Query Attention. In addition to improved accuracy, CurDKV reduces generation latency by up to 40% at high compression, offering a practical speed-accuracy tradeoff.
@@ -436,7 +436,7 @@
                     <br>
                     <em> International Conference on Machine Learning (ICML) 2025</em>
                     <br>
-                    <a href="https://openreview.net/forum?id=CYJlJgEzZs">Paper</a> | <a href="https://github.com/LCS2-IIITD/Downscaling">Code</a>
+                    <a href="https://openreview.net/forum?id=CYJlJgEzZs">Openreview</a> | <a href="https://github.com/LCS2-IIITD/Downscaling">Code</a>
                     <br>
                   <p style="color:rgb(156, 156, 156)">
                     We challenge the dominant focus on neural scaling laws and advocate for a paradigm shift toward downscaling in the development of large language models (LLMs). While scaling laws have provided critical insights into performance improvements through increasing model and dataset size, we emphasize the significant limitations of this approach, particularly in terms of computational inefficiency, environmental impact, and deployment constraints. To address these challenges, we propose a holistic framework for downscaling LLMs that seeks to maintain performance while drastically reducing resource demands. This paper outlines practical strategies for transitioning away from traditional scaling paradigms, advocating for a more sustainable, efficient, and accessible approach to LLM development.
@@ -493,7 +493,7 @@
                     <br>
                     <em> Transactions on Machine Learning Research (TMLR) 2025</em>
                     <br>
-                    <a href="https://openreview.net/forum?id=2HFmicB8kh">Paper</a> | <a href="https://github.com/parmanu-lcs2/peft/tree/main/examples/monteclora_finetuning">Code</a>
+                    <a href="https://openreview.net/forum?id=2HFmicB8kh">Openreview</a> | <a href="https://github.com/parmanu-lcs2/peft/tree/main/examples/monteclora_finetuning">Code</a>
                     <br>
                   <p style="color:rgb(156, 156, 156)">
                     Large Language Models (LLMs) are highly resource-intensive to fine-tune due to their enormous size. While low-rank adaptation is a prominent parameter-efficient fine-tuning approach, it suffers from sensitivity to hyperparameter choices, leading to instability in model performance on fine-tuning downstream tasks. This paper highlights the importance of effective parameterization in low-rank fine-tuning to reduce estimator variance and enhance the stability of final model outputs. We propose MonteCLoRA, an efficient fine-tuning technique that employs Monte Carlo estimation to learn an unbiased posterior estimation of low-rank parameters with low expected variance, stabilizing fine-tuned LLMs with only O(r) additional parameters, for a given rank r. MonteCLoRA shows 0.5% and 1.6% improvements in accuracy and robustness over unregularized low-rank adaptation method on natural language understanding tasks with pre-trained RoBERTa-base. Furthermore, in generative tasks with pre-trained LLaMA-1-7B and LLaMA-3.2-3B-Instruct, MonteCLoRA demonstrates robust performance with 50% and 62% lower spreads respectively than the contemporary efficient fine-tuning methods. The theoretical and empirical results presented in the paper underscore how parameterization and hyperpriors balance exploration-exploitation in the low-rank parametric space, therefore leading to more optimal and robust parameter estimation during efficient fine-tuning.
@@ -512,7 +512,7 @@
                     <br>
                     <em>International Conference on Learning Representations (ICLR) 2025</em>
                     <br>
-                    <a href="https://openreview.net/forum?id=5RZoYIT3u6">Openreview</a> | <a href="https://github.com/LCS2-IIITD/PruneNet">Code</a>
+                    <a href="https://openreview.net/forum?id=5RZoYIT3u6">Openreview</a> | <a href="https://pypi.org/project/efficient-pruners/">Code</a>
                     <br>
                   <p style="color:rgb(156, 156, 156)">
                     The ever-increasing size of large language models (LLMs) presents significant challenges for deployment due to their heavy computational and memory requirements. Current model pruning techniques attempt to alleviate these issues by relying heavily on external calibration datasets to determine which parameters to prune or compress, thus limiting their flexibility and scalability across different compression ratios. Moreover, these methods often cause severe performance degradation, particularly in downstream tasks, when subjected to higher compression rates. In this paper, we propose PruneNet, a novel model compression method that addresses these limitations by reformulating model pruning as a policy learning process. PruneNet decouples the pruning process from the model architecture, eliminating the need for calibration datasets. It learns a stochastic pruning policy to assess parameter importance solely based on intrinsic model properties while preserving the spectral structure to minimize information loss. PruneNet can compress the LLaMA-2-7B model in just 15 minutes, achieving over 80% retention of its zero-shot performance with a 30% compression ratio, outperforming existing methods that retain only 75% performance. Furthermore, on complex multitask language understanding tasks, PruneNet demonstrates its robustness by preserving up to 80% performance of the original model, proving itself a superior alternative to conventional structured compression techniques.
@@ -531,7 +531,7 @@
                     <br>
                     <em>International Conference on Learning Representations (ICLR) 2024</em>
                     <br>
-                    <a href="https://openreview.net/forum?id=Ixi4j6LtdX">Openreview</a> | <a href="https://github.com/notmyname16/MPDistil">Code</a>
+                    <a href="https://openreview.net/forum?id=Ixi4j6LtdX">Openreview</a> | <a href="https://pypi.org/project/mpdistil/">Code</a>
                     <br>
                   <p style="color:rgb(156, 156, 156)">
                     Knowledge distillation (KD) is a technique used to transfer knowledge from a larger “teacher” model into a smaller “student” model. Recent advancements in meta-learning-based knowledge distillation (MetaKD) emphasize that the finetuning of teacher models should be aware of the student’s need to achieve better knowledge distillation. However, existing MetaKD methods often lack incentives for the teacher model to improve itself. In this study, we introduce MPDistil, a meta-policy distillation technique, that utilizes novel optimization strategies to foster both collaboration and competition during the fine-tuning of the teacher model in the meta-learning step. Additionally, we propose a curriculum learning framework for the student model in a competitive setup, in which the student model aims to outperform the teacher model by self-training on various tasks. Exhaustive experiments on SuperGLUE and GLUE benchmarks demonstrate the efficacy of MPDistil compared to 20 conventional KD and advanced MetaKD baselines, showing significant performance enhancements in the student model– e.g., a distilled 6-layer BERT model outperforms a 12-layer BERT model on f ive out of six SuperGLUE tasks. Furthermore, MPDistil, while applied to a large language teacher model (DeBERTa-v2-xxlarge), significantly narrows the performance gap of its smaller student counterpart (DeBERTa-12) by just 4.6% on SuperGLUE. Wefurther demonstrate how higher rewards and customized training curricula strengthen the student model and enhance generalizability.
@@ -569,7 +569,7 @@
                     <br>
                     <em>Findings of the Association for Computational Linguistics (EMNLP) 2023</em>
                     <br>
-                    <a href="https://arxiv.org/abs/2310.14206">Paper</a> | <a href="https://github.com/victor7246/TransJect">Code</a>
+                    <a href="https://arxiv.org/abs/2310.14206">Paper</a> | <a href="https://pypi.org/project/transject/">Code</a>
                     <br>
                   <p style="color:rgb(156, 156, 156)">
                     Multi-head self-attention-based Transformers have shown promise in different learning tasks. Albeit these models exhibit significant improvement in understanding short-term and long-term contexts from sequences, encoders of Transformers and their variants fail to preserve layer-wise contextual information. Transformers usually project tokens onto sparse manifolds and fail to preserve mathematical equivalence among the token representations. In this work, we propose TransJect, an encoder model that guarantees a theoretical bound for layer-wise distance preservation between a pair of tokens. We propose a simple alternative to dot-product attention to ensure Lipschitz continuity. This allows TransJect to learn injective mappings to transform token representations to different manifolds with similar topology and preserve Euclidean distance between every pair of tokens in subsequent layers. Evaluations across multiple benchmark short- and long-sequence classification tasks show maximum improvements of 6.8% and 5.9%, respectively, over the variants of Transformers. Additionally, TransJect displays 79% better performance than Transformer on the language modeling task. We further highlight the shortcomings of multi-head self-attention from the statistical physics viewpoint. Although multi-head self-attention was incepted to learn different abstraction levels within the networks, our empirical analyses suggest that different attention heads learn randomly and unorderly. In contrast, TransJect adapts a mixture of experts for regularization; these experts are more orderly and balanced and learn different sparse representations from the input sequences. TransJect exhibits very low entropy and can be efficiently scaled to larger depths.
@@ -716,22 +716,6 @@
                            <br>
                            <br>
                            Final private leaderboard rank achieved 116 (Bronze medal)
-                        </p>
-                    </td>
-                </tr>
-
-                <tr style="border-bottom: 1px solid rgb(192, 192, 192);">
-                  <td width="10%" align="center"><img src="static/images/bengaliai.png" alt="PontTuset" width="170" style="border-style: none">
-                    </td><td width="90%" valign="top">
-                        <p><papertitle>Kaggle: Bengali.AI Handwritten Grapheme Classification Challenge 2020</papertitle> 
-                          <br>
-                          <a href="https://github.com/victor7246/Competition-Solutions/tree/master/Kaggle_Bengali_AI">Code</a> | <a href="https://www.kaggle.com/c/bengaliai-cv19">Link</a>
-                          <br>
-                          </p><p style="color:rgb(110, 110, 110)">
-                           Experimented with efficient net models with different CNN heads (SSE, GEM pooling) on GPU/TPU to classify handwritten bengali alphabets and its constituents (diacritics). 
-                           <br>
-                           <br>
-                           Final private leaderboard rank achieved 233 (out of 2000 teams)
                         </p>
                     </td>
                 </tr>
